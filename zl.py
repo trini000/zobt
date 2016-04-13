@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from decimal import *
 import getopt, pdb, sys
 
@@ -47,7 +49,7 @@ def main():
 def drawZL():
   leftsum = Decimal(1.0)
   pos = 0
-  base = [Decimal(0.0)] * g_backets
+  base = [Decimal(0.0)] * g_baskets
   drawRest(base, leftsum, pos)
 
 def drawRest(base, leftsum, pos):
@@ -57,7 +59,7 @@ def drawRest(base, leftsum, pos):
 #  print("added %s", base)
     return
 
-  if pos == g_buckets:
+  if pos == g_baskets:
     return
   base[pos] = leftsum
   g_result.append(base[:])
